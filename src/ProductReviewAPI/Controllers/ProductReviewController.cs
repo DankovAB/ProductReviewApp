@@ -4,10 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Http;
-using ProductReviewApp.Api.Models;
-using ProductReviewApp.Application.Commands;
 using ProductReviewApp.Application.Queries;
-using ProductReviewApp.Application.UserNotification;
 using ProductReviewApp.Persistence.Models;
 
 namespace ProductReviewApp.Api.Controllers

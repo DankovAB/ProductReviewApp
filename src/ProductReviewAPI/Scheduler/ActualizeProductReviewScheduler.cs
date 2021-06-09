@@ -1,10 +1,8 @@
-﻿using System.Threading.Tasks;
-using FluentScheduler;
+﻿using FluentScheduler;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using ProductReviewApp.Application.Commands;
-using ProductReviewApp.Application.Queries;
 
 namespace ProductReviewApp.Api.Scheduler
 {

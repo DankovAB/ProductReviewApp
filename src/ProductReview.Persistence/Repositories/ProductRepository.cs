@@ -88,10 +88,6 @@ namespace ProductReviewApp.Persistence.Repositories
         {
             using (var productDb = new ProductCollection(_configs))
             {
-                var products = productDb.Collection.Query().ToList();
-                products[1].Status = ProductStatus.Succeeded;
-                productDb.Collection.Update(products[1]);
-
                 return productDb.Collection.Query()
                     .Where(r => (r.OnActualized <= beforeActualizeDate
                                             || r.OnActualized == null)

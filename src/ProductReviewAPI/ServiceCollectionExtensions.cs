@@ -1,5 +1,4 @@
-﻿using FluentScheduler;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ProductReviewApp.Api.Scheduler;
 
