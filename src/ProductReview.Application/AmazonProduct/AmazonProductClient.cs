@@ -37,8 +37,12 @@ namespace ProductReviewApp.Application.AmazonProduct
             var (reviewSnapshots, nextPageUrl) = ParseReviews(document, lastReviewsDate);
             productSnapshot.ProductReviews.AddRange(reviewSnapshots);
 
+            var randWaitingForNextCall = new Random();
+
             while (nextPageUrl != null)
             {
+                await Task.Delay(randWaitingForNextCall.Next(700, 1200));
+
                 document = await LoadDocument(nextPageUrl);
 
                 (reviewSnapshots, nextPageUrl) = ParseReviews(document, lastReviewsDate);
